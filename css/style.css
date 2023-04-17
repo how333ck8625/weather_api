@@ -1,0 +1,167 @@
+@charset "UTF-8";
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: arial, "Noto Sans", 微軟正黑體, sans-serif;
+  /* Graphics Designed By 30000009006 From <a href="https://zh.lovepik.com/image-401167375/cherry-tree.html">LovePik.com</a> */
+  background-image: url("../pics/Lovepik_com-401167375-cherry-tree.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  margin: 30px 0 0 0;
+}
+header nav {
+  width: 1100px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+  box-shadow: 5px 5px 3px lightblue;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo i {
+  color: #6EAC7D;
+  font-size: 40px;
+}
+header .menu {
+  display: flex;
+  align-items: center;
+}
+header label {
+  display: none;
+  cursor: pointer;
+}
+header .menu ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+header .menu ul li a {
+  text-decoration: none;
+  color: #333333;
+  display: block;
+  padding: 0.25rem 0.9rem;
+  margin: 0 1.5rem;
+  border-radius: 20px;
+}
+header .menu ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.6862745098);
+}
+
+@media (max-width: 900px) {
+  header label {
+    display: block;
+  }
+  header .menu ul {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 42px;
+    z-index: 999;
+    background-color: #f2f2f2;
+    transition: 0.2s;
+    border-radius: 10px;
+  }
+  header #checkbox:checked ~ ul {
+    height: 180px;
+  }
+  header .menu ul li a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  header .menu ul li:after {
+    content: "";
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(206, 204, 204, 0.342);
+  }
+}
+main {
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 10px 0 10px;
+}
+
+.singleCard {
+  width: 32%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8784313725);
+  margin: 0 1.333% 1.333% 0;
+  border-radius: 15px;
+  box-shadow: 5px 5px 3px rgba(228, 173, 230, 0.658);
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  z-index: -1;
+}
+
+.singleCard:hover {
+  background-color: #ffffff;
+}
+
+@media (max-width: 880px) {
+  .singleCard {
+    width: 48%;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    max-width: 400px;
+  }
+
+  .singleCard {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@-webkit-keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
